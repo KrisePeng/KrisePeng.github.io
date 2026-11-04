@@ -1,0 +1,19 @@
+name: "KrisePeng.github.io"
+output_dir: "."
+navbar:
+  title: "Krise Peng"
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Resume"
+      href: resume.html
+    - text: "Email"    
+      icon: fa-envelope fa-lg
+      href: mailto:yp2846@cumc.columbia.edu
+    - text: "Github"
+      icon: fa-github fa-lg
+      href: https://github.com/KrisePeng
+
+output:
+  html_document:
+    theme: cerulean

@@ -1,0 +1,24 @@
+---
+title: "Resume"
+output: html_document
+---
+## Education
+
+**Columbia University**  
+M.S. in Biostatistics | 2026–Present
+
+**University of Washington**  
+B.S. in Statistics (Data Science Track) | 2022–2026
+
+## Research Interests
+
+- Statistical Learning
+- Causal Inference
+- Longitudinal Data Analysis
+- Health Data Science
+
+## Technical Skills
+
+- Programming: R, Python, SQL
+- Statistical Methods: Regression, Machine Learning
+- Tools: Git, GitHub, R Markdown, LaTeX
