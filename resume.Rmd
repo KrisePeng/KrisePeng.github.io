@@ -2,23 +2,67 @@
 title: "Resume"
 output: html_document
 ---
-## Education
+### Education
 
-**Columbia University**  
-M.S. in Biostatistics | 2026–Present
+**Columbia University, Mailman School of Public Health**  
+M.S. in Biostatistics, Theory and Methods  
+September 2026 – June 2028 (Expected)
 
 **University of Washington**  
-B.S. in Statistics (Data Science Track) | 2022–2026
+B.S. in Statistics, Data Science Track  
+September 2022 – March 2026  
 
-## Research Interests
+### Research Projects
 
-- Statistical Learning
-- Causal Inference
-- Longitudinal Data Analysis
-- Health Data Science
+#### Gaussian Processes for Non-Concurrent Controls in Platform Trials
 
-## Technical Skills
+- Investigated statistical borrowing from non-concurrent controls in platform trials under the Entire Concurrently Eligible (ECE) framework.
+- Compared single-task and multi-task Gaussian process models for modeling temporal heterogeneity and improving estimation efficiency.
 
-- Programming: R, Python, SQL
-- Statistical Methods: Regression, Machine Learning
-- Tools: Git, GitHub, R Markdown, LaTeX
+#### Statistical Evaluation of LLM Accuracy and Stability
+
+- Designed factorial experiments to evaluate the effects of prompt structure and sampling temperature on LLM accuracy and reproducibility.
+- Applied logistic regression and entropy-based measures to assess predictive performance and response consistency.
+
+#### Bootstrap and Jackknife+ Conformal Prediction
+
+- Developed regression models and evaluated uncertainty using bootstrap confidence intervals.
+- Implemented Jackknife+ conformal prediction to construct prediction intervals with nominal 95% coverage.
+
+### Professional Experience
+
+#### MorningStone Tech
+*AI R&D Intern | Mar – Aug 2026*
+
+- Developed asynchronous web-scraping pipelines using Python, aiohttp, and Playwright to collect financial and commodity market data.
+- Built LLM-assisted document processing and automated reporting workflows using OCR, SQL, and Flask APIs.
+
+#### Sinovac Biotech
+*Biostatistics Intern | Dec 2023 – May 2024*
+
+- Analyzed over 200,000 SEER observations using Kaplan–Meier survival analysis and Cox regression.
+- Developed reproducible R workflows for statistical modeling, visualization, and reporting.
+
+#### East Asia Qianhai Securities
+*Data Analysis Intern | Jun – Sep 2024*
+
+- Automated cleaning and processing of more than 10 GB of financial data using Python and SQL.
+- Applied logistic regression and random forest models for market prediction.
+
+### Additional Experience
+
+#### Arknights BWiki
+*Data Team Member | Jan 2026 – Present*
+
+- Co-developed Python automation scripts to parse game data and generate standardized wiki entries.
+- Maintained data processing workflows across game updates.
+
+### Technical Skills
+
+**Programming:** R, Python, SQL
+
+**Statistical Methods:** Generalized Linear Models, Gaussian Processes, Survival Analysis, Bayesian Inference, Bootstrap and Resampling, Conformal Prediction
+
+**Machine Learning:** Random Forests, Predictive Modeling, Statistical Learning
+
+**Tools:** Git, GitHub, R Markdown, LaTeX, Flask, Playwright

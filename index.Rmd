@@ -9,7 +9,7 @@ output:
 
 # Welcome!
 
-Hi! I'm Yan Peng, a Master's student in Biostatistics
+Hi! I'm Yan Peng, a first-year Master's student in Biostatistics
 at Columbia University.
 
 I received my B.S. in Statistics from the
@@ -18,14 +18,3 @@ University of Washington.
 My academic interests include statistical learning,
 causal inference, and health data analysis.
 
-## Education
-
-**Columbia University**
-- M.S. in Biostatistics, 2026–Present
-
-**University of Washington**
-- B.S. in Statistics, Data Science Track, 2022-2026
-
-## Contact
-
-- GitHub: [KrisePeng](https://github.com/KrisePeng)
