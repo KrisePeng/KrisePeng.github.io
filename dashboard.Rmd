@@ -69,19 +69,51 @@ plot_ly(
   )
 ```
 
-### Distribution of Maximum Temperature
+
+### Daily Minimum vs. Maximum Temperature
 
 ```{r}
+scatter_df =
+  weather_df |>
+  filter(!is.na(tmin), !is.na(tmax)) |>
+  mutate(
+    month = lubridate::month(date),
+    season = case_when(
+      month %in% c(12, 1, 2) ~ "Winter",
+      month %in% c(3, 4, 5) ~ "Spring",
+      month %in% c(6, 7, 8) ~ "Summer",
+      TRUE ~ "Fall"
+    ),
+    season = factor(
+      season,
+      levels = c("Winter", "Spring", "Summer", "Fall")
+    )
+  ) |>
+  slice_sample(prop=0.1)
+
 plot_ly(
-  weather_df |> filter(!is.na(tmax)),
+  scatter_df,
+  x = ~tmin,
   y = ~tmax,
-  type = "box",
-  name = "Maximum Temperature"
+  color = ~season,
+  type = "scatter",
+  mode = "markers",
+  text = ~paste(
+    "Date:", date,
+    "<br>Station:", id,
+    "<br>Min:", tmin, "°C",
+    "<br>Max:", tmax, "°C"
+  ),
+  hoverinfo = "text",
+  marker = list(size = 5, opacity = 0.5)
 ) |>
   layout(
-    yaxis = list(title = "Temperature (°C)")
+    xaxis = list(title = "Minimum Temperature (°C)"),
+    yaxis = list(title = "Maximum Temperature (°C)"),
+    legend = list(orientation = "h", y = -0.25)
   )
 ```
+
 
 Column
 -----------------------------------------------------------------------
