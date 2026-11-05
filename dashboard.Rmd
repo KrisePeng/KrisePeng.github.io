@@ -41,7 +41,7 @@ weather_df =
   )
 ```
 
-Column
+Column {data-width=500}
 -----------------------------------------------------------------------
 
 ### Monthly Average Maximum Temperature
@@ -114,8 +114,7 @@ plot_ly(
   )
 ```
 
-
-Column
+Column {data-width=500}
 -----------------------------------------------------------------------
 
 ### Monthly Total Precipitation
