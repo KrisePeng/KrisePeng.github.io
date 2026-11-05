@@ -7,6 +7,8 @@ navbar:
       href: index.html
     - text: "Resume"
       href: resume.html
+    - text: "Dashboard"
+      href: dashboard.html
     - text: "Email"    
       icon: fa-envelope fa-lg
       href: mailto:yp2846@cumc.columbia.edu
