@@ -1,0 +1,100 @@
+---
+title: "NY NOAA Weather Dashboard"
+output: 
+    flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+```
+
+```{r data}
+data("ny_noaa")
+
+weather_df =
+  ny_noaa |>
+  mutate(
+    date = as.Date(date),
+    tmax = as.numeric(tmax) / 10,
+    tmin = as.numeric(tmin) / 10,
+    prcp = as.numeric(prcp) / 10
+  ) |>
+  filter(
+    date >= as.Date("2010-01-01"),
+    date < as.Date("2011-01-01")
+  )
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Monthly Average Maximum Temperature
+
+```{r}
+temp_df =
+  weather_df |>
+  mutate(month = lubridate::month(date)) |>
+  group_by(month) |>
+  summarize(
+    avg_tmax = mean(tmax, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+plot_ly(
+  temp_df,
+  x = ~month,
+  y = ~avg_tmax,
+  type = "scatter",
+  mode = "lines+markers"
+) |>
+  layout(
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Temperature (°C)")
+  )
+```
+
+### Distribution of Maximum Temperature
+
+```{r}
+plot_ly(
+  weather_df |> filter(!is.na(tmax)),
+  y = ~tmax,
+  type = "box",
+  name = "Maximum Temperature"
+) |>
+  layout(
+    yaxis = list(title = "Temperature (°C)")
+  )
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Monthly Total Precipitation
+
+```{r}
+prcp_df =
+  weather_df |>
+  mutate(month = lubridate::month(date)) |>
+  group_by(month) |>
+  summarize(
+    total_prcp = sum(prcp, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+plot_ly(
+  prcp_df,
+  x = ~month,
+  y = ~total_prcp,
+  type = "bar"
+) |>
+  layout(
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Total precipitation (mm)")
+  )
+```
