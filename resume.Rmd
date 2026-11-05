@@ -1,6 +1,8 @@
 ---
 title: "Resume"
-output: html_document
+output: 
+  html_document:
+    theme: flatly
 ---
 ### Education
 

@@ -1,9 +1,18 @@
 ---
 title: "NY NOAA Weather Dashboard"
-output: 
+output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    navbar:
+      - title: "Home"
+        href: "index.html"
+      - title: "Resume"
+        href: "resume.html"
+      - title: "Dashboard"
+        href: "dashboard.html"
+      - title: "GitHub"
+        href: "https://github.com/KrisePeng"
 ---
 
 ```{r setup, include=FALSE}
