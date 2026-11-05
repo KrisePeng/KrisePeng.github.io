@@ -1,7 +1,7 @@
 name: "KrisePeng.github.io"
 output_dir: "."
 navbar:
-  title: "Krise Peng"
+  title: "Yan Peng"
   right:
     - text: "Home"
       href: index.html
@@ -15,5 +15,6 @@ navbar:
     - text: "Github"
       icon: fa-github fa-lg
       href: https://github.com/KrisePeng
-
-
+output:
+  html_document:
+    theme: flatly
